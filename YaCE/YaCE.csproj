@@ -1,0 +1,192 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="3.5">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{3825F07A-9ABE-43A5-A30E-7455ADE21836}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>YaCE</RootNamespace>
+    <AssemblyName>YaCE</AssemblyName>
+    <ProjectTypeGuids>{4D628B5B-2FBC-4AA6-8C16-197242AEB884};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <PlatformFamilyName>PocketPC</PlatformFamilyName>
+    <PlatformID>4118C335-430C-497f-BE48-11C3316B135E</PlatformID>
+    <OSVersion>5.1</OSVersion>
+    <DeployDirSuffix>YaCE</DeployDirSuffix>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <NativePlatformName>Windows Mobile 5.0 Pocket PC SDK</NativePlatformName>
+    <FormFactorID>
+    </FormFactorID>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;$(PlatformFamilyName)</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <FileAlignment>512</FileAlignment>
+    <WarningLevel>4</WarningLevel>
+    <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE;$(PlatformFamilyName)</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <FileAlignment>512</FileAlignment>
+    <WarningLevel>4</WarningLevel>
+    <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
+    <DocumentationFile>bin\Release\YaCE.xml</DocumentationFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="mscorlib" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\Ya\ActualContainer.cs">
+      <Link>ActualContainer.cs</Link>
+    </Compile>
+    <Compile Include="..\Ya\Attributes.cs">
+      <Link>Attributes.cs</Link>
+    </Compile>
+    <Compile Include="..\Ya\Caching\Caches.cs">
+      <Link>Caching\Caches.cs</Link>
+    </Compile>
+    <Compile Include="..\Ya\Caching\ICache.cs">
+      <Link>Caching\ICache.cs</Link>
+    </Compile>
+    <Compile Include="..\Ya\Caching\NullCache.cs">
+      <Link>Caching\NullCache.cs</Link>
+    </Compile>
+    <Compile Include="..\Ya\Caching\StaticCache.cs">
+      <Link>Caching\StaticCache.cs</Link>
+    </Compile>
+    <Compile Include="..\Ya\Configuration\CompositeSolvingInfo.cs">
+      <Link>Configuration\CompositeSolvingInfo.cs</Link>
+    </Compile>
+    <Compile Include="..\Ya\Configuration\ISolvingInfo.cs">
+      <Link>Configuration\ISolvingInfo.cs</Link>
+    </Compile>
+    <Compile Include="..\Ya\Configuration\SolvingConfiguration.cs">
+      <Link>Configuration\SolvingConfiguration.cs</Link>
+    </Compile>
+    <Compile Include="..\Ya\Configuration\SolvingInfo.cs">
+      <Link>Configuration\SolvingInfo.cs</Link>
+    </Compile>
+    <Compile Include="..\Ya\Container.cs">
+      <Link>Container.cs</Link>
+    </Compile>
+    <Compile Include="..\Ya\Extensions\AssemblyExtensions.cs">
+      <Link>Extensions\AssemblyExtensions.cs</Link>
+    </Compile>
+    <Compile Include="..\Ya\Extensions\PropertyInfoExtensions.cs">
+      <Link>Extensions\PropertyInfoExtensions.cs</Link>
+    </Compile>
+    <Compile Include="..\Ya\Extensions\TypeExtensions.cs">
+      <Link>Extensions\TypeExtensions.cs</Link>
+    </Compile>
+    <Compile Include="..\Ya\Fluent\ContainerConfiguration\DefaultSolvingFluent.cs">
+      <Link>Fluent\ContainerConfiguration\DefaultSolvingFluent.cs</Link>
+    </Compile>
+    <Compile Include="..\Ya\Fluent\ContainerConfiguration\FluentContainerConfiguration.cs">
+      <Link>Fluent\ContainerConfiguration\FluentContainerConfiguration.cs</Link>
+    </Compile>
+    <Compile Include="..\Ya\Fluent\ContainerConfiguration\IfCannotSolveFluent.cs">
+      <Link>Fluent\ContainerConfiguration\IfCannotSolveFluent.cs</Link>
+    </Compile>
+    <Compile Include="..\Ya\Fluent\ContainerConfiguration\IFluentContainerConfiguration.cs">
+      <Link>Fluent\ContainerConfiguration\IFluentContainerConfiguration.cs</Link>
+    </Compile>
+    <Compile Include="..\Ya\Fluent\ContainerConfiguration\SolvingAlterationWithFluentConfig.cs">
+      <Link>Fluent\ContainerConfiguration\SolvingAlterationWithFluentConfig.cs</Link>
+    </Compile>
+    <Compile Include="..\Ya\Fluent\SolvingAlterationFluent.cs">
+      <Link>Fluent\SolvingAlterationFluent.cs</Link>
+    </Compile>
+    <Compile Include="..\Ya\IInjecter.cs">
+      <Link>IInjecter.cs</Link>
+    </Compile>
+    <Compile Include="..\Ya\Solvers\AutoSolver.cs">
+      <Link>Solvers\AutoSolver.cs</Link>
+    </Compile>
+    <Compile Include="..\Ya\Solvers\DefaultSolver.cs">
+      <Link>Solvers\DefaultSolver.cs</Link>
+    </Compile>
+    <Compile Include="..\Ya\Solvers\ExecutionSolver.cs">
+      <Link>Solvers\ExecutionSolver.cs</Link>
+    </Compile>
+    <Compile Include="..\Ya\Solvers\GenericsSolver.cs">
+      <Link>Solvers\GenericsSolver.cs</Link>
+    </Compile>
+    <Compile Include="..\Ya\Solvers\IServiceSolver.cs">
+      <Link>Solvers\IServiceSolver.cs</Link>
+    </Compile>
+    <Compile Include="..\Ya\Solvers\ListSolver.cs">
+      <Link>Solvers\ListSolver.cs</Link>
+    </Compile>
+    <Compile Include="..\Ya\Solvers\PropertySolver.cs">
+      <Link>Solvers\PropertySolver.cs</Link>
+    </Compile>
+    <Compile Include="..\Ya\Solvers\ServiceSolver.cs">
+      <Link>Solvers\ServiceSolver.cs</Link>
+    </Compile>
+    <Compile Include="..\Ya\Solvers\SolverWrapper.cs">
+      <Link>Solvers\SolverWrapper.cs</Link>
+    </Compile>
+    <Compile Include="..\Ya\Solvers\TypeSolver.cs">
+      <Link>Solvers\TypeSolver.cs</Link>
+    </Compile>
+    <Compile Include="..\Ya\SolvingMethods\InstanceMethod.cs">
+      <Link>SolvingMethods\InstanceMethod.cs</Link>
+    </Compile>
+    <Compile Include="..\Ya\SolvingMethods\ISolvingMethod.cs">
+      <Link>SolvingMethods\ISolvingMethod.cs</Link>
+    </Compile>
+    <Compile Include="..\Ya\SolvingMethods\LambdaMethod.cs">
+      <Link>SolvingMethods\LambdaMethod.cs</Link>
+    </Compile>
+    <Compile Include="..\Ya\SolvingMethods\TypeMethod.cs">
+      <Link>SolvingMethods\TypeMethod.cs</Link>
+    </Compile>
+    <Compile Include="..\Ya\Support\CannotSolveException.cs">
+      <Link>Support\CannotSolveException.cs</Link>
+    </Compile>
+    <Compile Include="..\Ya\Support\Pair.cs">
+      <Link>Support\Pair.cs</Link>
+    </Compile>
+    <Compile Include="..\Ya\Support\TypeDictionary.cs">
+      <Link>Support\TypeDictionary.cs</Link>
+    </Compile>
+    <Compile Include="..\Ya\Support\YaException.cs">
+      <Link>Support\YaException.cs</Link>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CompactFramework.CSharp.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}">
+        <HostingProcess disable="1" />
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
